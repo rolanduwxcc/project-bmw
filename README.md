@@ -1,7 +1,7 @@
-# project-bmw
+# project-bmw (needs a new name)
 
 ## Purpose
-Movie and news search site, maybe some weather. :)
+Movie and news search site, maybe some weather. (will need to change)
 
 ## Built With
 * HTML
