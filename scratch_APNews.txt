@@ -1,0 +1,61 @@
+Example AP News API return
+
+Search example:
+https://api.ap.org/media/v/content/search?q=(type:picture+AND+"Emma+Stone")+OR+(type:text+AND+"Ryan+Gosling")&apikey={apikey}
+
+Search result example:
+https://api.ap.org/media/v/docs/index.html?#t=Account_Plans.htm&rhsearch=get%20api%20key&rhhlterm=get%20api%20key&rhsyns=%20
+{
+ "api_version": "2.0",
+ "api_mode": "live",
+ "api_build": "2.0.2",
+ "id": "S1Z8VDP0Z",
+ "method": "/account/plans.GET",
+ "org_name": "My Organization",
+ "params": {},
+ "data": {
+   "id": "https://api.ap.org/media/v/account/plans",
+   "title": "My Plans",
+   "updated": "2020-07-02T16:19:29.616Z",
+   "plans": [
+    {
+     "id": 123,
+     "name": "Metered Plan",
+     "updated": "2020-07-02T16:19:29.616Z",
+     "plan_style": "downloads",
+     "used": 0,
+     "usage_limit": 100,
+     "interval": "P1M",
+     "next_cycle_begins": "2020-08-01",
+     "entitlements": [
+      {
+       "id": 42460,
+       "name": "AP Exclusive Photo (World)",
+       "type": "Product",
+       "meter_ticks": 2,
+       "overage_allowed": false,
+       "search_link": "https://api.ap.org/media/v/content/search?q=productid:42460",
+       "feed_link": "https://api.ap.org/media/v/content/feed?q=productid:42460"
+      },
+      {
+       "id": 42906,
+       "name": "AP Premium Photo",
+       "type": "Product",
+       "meter_ticks": 2,
+       "overage_allowed": false,
+       "search_link": "https://api.ap.org/media/v/content/search?q=productid:42906",
+       "feed_link": "https://api.ap.org/media/v/feed?q=productid:42906"
+      },
+      {
+       "id": 38474,
+       "name": "Graphics Bank - All",
+       "type": "Product",
+       "meter_ticks": 1,
+       "overage_allowed": false,
+       "search_link": "https://api.ap.org/media/v/content/search?q=productid:38474",
+       "feed_link": "https://api.ap.org/media/v/content/feed?q=productid:38474"
+      }]
+    }]
+  }
+}
+

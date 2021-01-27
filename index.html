@@ -9,11 +9,84 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
-
-    <header>
+    <header class="hero">
+        <h1 class="app-title"><i class="fas fa-temperature-high">Movie News Search</i></h1>
     </header>
 
+    <main class="flex-row justify-space-between">
+           <!------------------------------------------------------ Search Section & Previous Searches -->
+           <div class="col-12 col-md-2">
+            <div class="card">
+                <h3 class="card-header text-uppercase">Search for a Movie:</h3>
+                <form id="city-search-form" class="card-body">
+                    <input name="city" id="city" type="text" autofocus="true" class="form-input" placeholder="Captain America, Iron Man, etc"/>
+                    <button type="submit" class="btn">Search <i class="fas fa-search-location"></i></button>
+                </form>
+                <div id="city-list" class="card-body">
+
+                </div>
+
+            </div>
+        </div>
+
+    <!-- SIDEBOARD --- Form take input: Movie Titles 
+    - get Search data
+    - Send to API Movie Database
+    - Display information about the Movie in the sidebard.
+    1. Make a input form element
+    2. 
+    -->
+
     <main>
+    <!--
+        Take the data from Movie Database and doing News Searches from AP News API
+        To pull links to articles and display in this section
+
+    -->
+          <!------------------------------------------------------------------ Weather Display Sections -->
+          <div class="col-12 col-md-10">
+            <!-----------------------------------------------------------------Current Weather Section-->
+            <div class="flex-row">
+                <h3 class="hide" id="currently-title">Movie Information</h3>
+            </div>
+            <div class="flex-row">
+                <div class="col-12 col-md-4">
+                    <div class="" id="current-weather">
+                    </div> 
+                </div>
+            </div>
+
+            
+            <!---------------------------------------------------------------------- Five Day Forcast -->
+            <div class="flex-row">
+                <h3 class="hide" id="five-day-title">Actor information</h3>
+            </div>
+            <div class="flex-row">       
+
+                <div class="col-12 col-md-2" id="day-0">
+                    words
+                </div>
+
+                <div class="col-12 col-md-2" id="day-1">
+                    words
+                </div>
+                
+                <div class="col-12 col-md-2" id="day-2">
+                    picture
+                </div>
+                
+                <div class="col-12 col-md-2" id="day-3">
+                    picture
+                </div>
+                
+                <div class="col-12 col-md-2" id="day-4">
+                    picutuer
+                </div>
+                
+            </div>
+
+
+        </div>
     </main>
 
     <script src="assets/js/script.js"></script>
