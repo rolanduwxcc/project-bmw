@@ -35,6 +35,6 @@ Movie and news search site, maybe some weather. (will need to change)
 * Warren Rowland - Find me on [Linked In](https://www.linkedin.com/in/linkedinrowland/) or [GitHub](https://github.com/rolanduwxcc)
 
 ## Screenshots
-![bmw-project](assets/images/projec-outline.png)
+![bmw-project](assets/images/project-outline.png)
 
 ### ©️2020 Rolanduwxcc, Inc 
