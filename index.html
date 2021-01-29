@@ -11,25 +11,28 @@
 <body class="container">
     <header class="flex-row">
         <h1 class="flex-column">
-            <i class="fas fa-temperature-high">Movie News Search</i>
+            <i>Movie News Search</i>
         </h1>
     </header>
     <main class="flex-row">
         <!------------------------------- Search Section Side 1 -->
         <div class="flex-column left-side col-12 col-md-6">
-            <div class="card">
+            <div class="container">
                 <h3 class="card-header text-uppercase">Search for a Movie:</h3>
                 <form id="movie-search-form" class="flex-row card-body">
                     <input name="movie" id="movie" type="text" autofocus="true" class="flex-column form-input"
                         placeholder="Captain America, Iron Man, etc" />
                     <button type="submit" class="flex-column btn">Search <i class="fas fa-search-location"></i></button>
                 </form>
-                <div id="movie-data-list" class="flex-row card-body">
-                    <div class="flex-column" id="movie-facts">
-                    </div>
-                    <div class="flex-column" id="movie-poster">
-                    </div>
-                </div>
+            </div>
+            <div id="movie-info-container" class="flex-row card-body">
+                <!-- generate html boxes for the info we pull on movie-->
+            </div>
+            <div name="poster-container">
+
+            </div>
+            <div name="description-container">
+
             </div>
         </div>
         <!--
@@ -38,15 +41,18 @@
     -->
         <!--------------------------------------News Display Sections Side 2 -->
         <div class="flex-column right-side col-12 col-md-6">
+            <h3 id="currently-title text-uppercase">Newsworthy News</h3>
             <div class="card container">
-                <h3 id="currently-title text-uppercase">Newsworthy News</h3>
-                <div class="flex-row">
                     <div class="flex-column news-links" id="news-links">
-                        <p>news link</p>
-                        <p>news link</p>
+                    <div>
                         <p>news link</p>
                     </div>
-                </div>
+                    <div>
+                        <p>news link</p>
+                    <div>
+                    </div>
+                        <p>news link</p>
+                    </div>
             </div>
         </div>
     </main>
