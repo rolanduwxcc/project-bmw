@@ -117,11 +117,118 @@ Movie Review search results example:
     ]
 }
 
-NYT Semantic Search URL
-https://developer.nytimes.com/docs/semantic-api-product/1/overview
+NYT Article Search URL and EXAMPLE:
 
-http://api.nytimes.com/svc/semantic/v2/concept/name/<concept_type>/<specific_concept>.json(?optional_parameters)&api-key=your-API-key
-
-http://api.nytimes.com/svc/semantic/v2/concept/name/nytd_per/Evans, Chris.json?fields=pages,links,scope_notes&api-key=2BRTvk2fDdRpikdcvLeUnTV3zBuddquD
-
-
+https://api.nytimes.com/svc/search/v2/articlesearch.json?q=Evans,Chris&api-key=2BRTvk2fDdRpikdcvLeUnTV3zBuddquD
+{
+    "status": "OK",
+    "copyright": "Copyright (c) 2021 The New York Times Company. All Rights Reserved.",
+    "response": {
+        "docs": [
+            {
+                "abstract": "A look at the career of the actor now starring in “Captain America: The First Avenger.”",
+                "web_url": "https://www.nytimes.com/slideshow/2011/07/10/movies/20110710-evans.html",
+                "snippet": "A look at the career of the actor now starring in “Captain America: The First Avenger.”",
+                "lead_paragraph": "A look at the career of the actor now starring in “Captain America: The First Avenger.”",
+                "source": "The New York Times",
+                "multimedia": [
+                    {
+                        "rank": 0,
+                        "subtype": "wide",
+                        "caption": null,
+                        "credit": null,
+                        "type": "image",
+                        "url": "images/2011/07/10/movies/20110710-evans-slide-ZR25/20110710-evans-slide-ZR25-thumbWide.jpg",
+                        "height": 126,
+                        "width": 190,
+                        "legacy": {
+                            "widewidth": 190,
+                            "wideheight": 126,
+                            "wide": "images/2011/07/10/movies/20110710-evans-slide-ZR25/20110710-evans-slide-ZR25-thumbWide.jpg"
+                        },
+                        "subType": "wide",
+                        "crop_name": "thumbWide"
+                    },
+                    {
+                        "rank": 0,
+                        "subtype": "jumbo",
+                        "caption": null,
+                        "credit": null,
+                        "type": "image",
+                        "url": "images/2011/07/10/movies/20110710-evans-slide-ZR25/20110710-evans-slide-ZR25-jumbo.jpg",
+                        "height": 681,
+                        "width": 1024,
+                        "legacy": {},
+                        "subType": "jumbo",
+                        "crop_name": "jumbo"
+                    },
+                    {
+                        "rank": 0,
+                        "subtype": "slide",
+                        "caption": null,
+                        "credit": null,
+                        "type": "image",
+                        "url": "images/2011/07/10/movies/20110710-evans-slide-ZR25/20110710-evans-slide-ZR25-slide.jpg",
+                        "height": 399,
+                        "width": 600,
+                        "legacy": {},
+                        "subType": "slide",
+                        "crop_name": "slide"
+                    },
+                    {
+                        "rank": 0,
+                        "subtype": "thumbnail",
+                        "caption": null,
+                        "credit": null,
+                        "type": "image",
+                        "url": "images/2011/07/10/movies/20110710-evans-slide-ZR25/20110710-evans-slide-ZR25-thumbStandard.jpg",
+                        "height": 75,
+                        "width": 75,
+                        "legacy": {
+                            "thumbnail": "images/2011/07/10/movies/20110710-evans-slide-ZR25/20110710-evans-slide-ZR25-thumbStandard.jpg",
+                            "thumbnailwidth": 75,
+                            "thumbnailheight": 75
+                        },
+                        "subType": "thumbnail",
+                        "crop_name": "thumbStandard"
+                    }
+                ],
+                "headline": {
+                    "main": "The Films of Chris Evans",
+                    "kicker": null,
+                    "content_kicker": null,
+                    "print_headline": null,
+                    "name": null,
+                    "seo": null,
+                    "sub": null
+                },
+                "keywords": [
+                    {
+                        "name": "subject",
+                        "value": "Movies",
+                        "rank": 1,
+                        "major": "N"
+                    },
+                    {
+                        "name": "persons",
+                        "value": "Evans, Chris",
+                        "rank": 2,
+                        "major": "N"
+                    }
+                ],
+                "pub_date": "2011-07-08T20:20:08+0000",
+                "document_type": "multimedia",
+                "news_desk": "Movies",
+                "section_name": "Movies",
+                "byline": {
+                    "original": null,
+                    "person": [],
+                    "organization": null
+                },
+                "type_of_material": "Slideshow",
+                "_id": "nyt://slideshow/f3b98164-b0ec-5b9d-aae5-180e9dceeedf",
+                "word_count": 0,
+                "slideshow_credits": "Daniel Peebles for The New York Times",
+                "uri": "nyt://slideshow/f3b98164-b0ec-5b9d-aae5-180e9dceeedf"
+            },
+            .....
