@@ -11,25 +11,31 @@ var movieSearchFormEl = document.querySelector("#movie-search-form");
 //-----------------------------------------------FUNCTIONS
 var movieSubmitHandler = function(event) {
     event.preventDefault();
-    var movieName = movieInputEl.value.trim();
+    let movieName = movieInputEl.value.trim();
     if (movieName) {
         fetchMovieDataAbout(movieName);
-        movieInputEl.value = "";
+        console.log(movieName);
+        movieInputEl.setAttribute("value","");
+        console.log(movieName);
     }
 };
+
 function fetchMovieDataAbout(searchTerm) {
+    console.log(searchTerm);
     if (!searchTerm) {
         searchTerm="Avengers";
     }
     let apiKey="1d01c961";
     let apiUrl="https://www.omdbapi.com/?apikey="+apiKey+"&t="+searchTerm;
-
+    console.log(apiUrl);
     fetch(apiUrl).then(function(response) {
         if(response.ok) {
             response.json().then(function(movieDataJSON){
-                //console.log(movieDataJSON);
+                // console.log(movieDataJSON);
                 //INSERT FUNCTION CALL HERE
                 //call the movie html disply tag and pass JSON
+                //**this fetch after probably needs to be somewhere else */
+                fetchNewYorkTimesDataAbout(searchTerm);
             });
         }
         else {
@@ -72,6 +78,7 @@ function fetchMovieDataAbout(searchTerm) {
 // }
 
 function fetchNewYorkTimesDataAbout(searchTerm) {
+    console.log(searchTerm);
     if (!searchTerm) {
         searchTerm="Avengers";
     }
@@ -80,7 +87,7 @@ function fetchNewYorkTimesDataAbout(searchTerm) {
         searchTerm +
         "&api-key=" +
         apikey;
-
+    console.log(apiUrl);
     fetch(apiUrl).then(function(response) {
         if (response.ok) {
             response.json().then(function(nytDataJSON) {
@@ -106,6 +113,7 @@ function buildNewsHTML(nytDataJSON) {
     let imageUrlPrefix = "https://www.nytimes.com/";
     
     let newsLinksEl=document.getElementById("news-links");
+    newsLinksEl.innerHTML = "";
     
     for (let i = 0; i < 5; i++) {
         const article = articlesArray[i];
@@ -129,4 +137,4 @@ function buildNewsHTML(nytDataJSON) {
     }
 }
 //-------------------------------------------LISTENERS and CALLS
-movieSearchFormEl.addEventListener("submit", fetchMovieDataAbout);
+movieSearchFormEl.addEventListener("submit", movieSubmitHandler);
