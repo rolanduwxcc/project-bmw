@@ -1,5 +1,6 @@
 //------------------------------------------------VARIABLES
-
+var movieInputEl = document.querySelector("#movie");
+var movieSearchFormEl = document.querySelector("#movie-search-form");
 
 
 
@@ -8,6 +9,14 @@
 
 
 //-----------------------------------------------FUNCTIONS
+var movieSubmitHandler = function(event) {
+    event.preventDefault();
+    var movieName = movieInputEl.value.trim();
+    if (movieName) {
+        fetchMovieDataAbout(movieName);
+        cityInputEl.value = "";
+    }
+};
 function fetchMovieDataAbout(searchTerm) {
     if (!searchTerm) {
         searchTerm="Avengers";
@@ -118,13 +127,6 @@ function buildNewsHTML(nytDataJSON) {
         newsLinksEl.appendChild(newsCardEl);
 
     }
-
-    
-
 }
-
-
-
 //-------------------------------------------LISTENERS and CALLS
-fetchMovieDataAbout();
-fetchNewYorkTimesDataAbout();
+movieSearchFormEl.addEventListener("submit", fetchMovieDataAbout);
