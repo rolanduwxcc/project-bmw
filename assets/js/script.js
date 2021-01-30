@@ -14,7 +14,7 @@ var movieSubmitHandler = function(event) {
     var movieName = movieInputEl.value.trim();
     if (movieName) {
         fetchMovieDataAbout(movieName);
-        cityInputEl.value = "";
+        movieInputEl.value = "";
     }
 };
 function fetchMovieDataAbout(searchTerm) {
