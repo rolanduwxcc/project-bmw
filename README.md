@@ -31,7 +31,7 @@ Movie and news search site, maybe some weather. (will need to change)
 
 ## Contact Info
 * Brittany Lee - Find me on
-* Myles Kovacs - Find me on
+* Myles Kovacs - Find me on [GitHub](https://github.com/MylesKovacs)
 * Warren Rowland - Find me on [Linked In](https://www.linkedin.com/in/linkedinrowland/) or [GitHub](https://github.com/rolanduwxcc)
 
 ## Screenshots
