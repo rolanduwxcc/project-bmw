@@ -40,6 +40,7 @@ function fetchMovieDataAbout(searchTerm) {
                 // </ul>
                 var ul=$("<ul>");
                 ul.attr("id","movieListInfo");
+                // ul.text("Movie Info: ")
 
                 //TITLE
                 var li1 = $("<li>");

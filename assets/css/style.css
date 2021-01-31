@@ -1,6 +1,6 @@
 :root {
     --primary: white;
-    --secondary: purple;
+    --secondary: #4682B4;
     --tertiary: blue;
     --light-dark: navy;
     --dark: #purple;
@@ -11,21 +11,29 @@
     box-sizing: border-box;
   }
   
+#test{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 
   .hero {
     background-image: url("../images/cinema.jpg");
-    height: 400px;
+    height: 650px;
     background-size: cover;
-    background-position: 70%;
+    background-position: 80%;
     background-attachment: fixed;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding: 10px;
+    padding: 5%;
     text-shadow: 0 0 10px rgba(0,0,0, 0.60);
 }
 
+  /* .container {
+  background-image: url("../images/popcorn.jpg");  } */
   
   body {
     background-color: var(--primary);
@@ -35,22 +43,17 @@
     color: var(--dark);
     line-height: 1.5;
     font-size: 16px;
-    flex:auto;
+    flex:auto;font-weight: bolder;
   }
   i {
     font-weight: bold;
     color:white;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
 
    h1 {
     color:white;
-    text-align: right;
-    line-height: 1.7;
     font-size: 150px;
-    bottom: 50px;
-    vertical-align: bottom;
-    padding: 0 0 50px 0;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
 
@@ -61,21 +64,16 @@
     line-height: 1.25;
   }
   
-  
   main {
     margin: 20px auto;
     width: 94%;
   }
-  
-  p {
-    font-size: 1.2rem;
-  }
-  
+ 
    .btn {
     font-size: 25px;
     text-decoration:none;
-    padding: 6px 5px;
-    width: 40%;
+    padding: 5px;
+    width: 23%;
     display: block;
     margin: 5px 0;
     border-radius: var(--border-radius);
@@ -85,80 +83,9 @@
     background-color: var(--light-dark);
     box-shadow: 3px 3px var(--dark);
     transform: translate(-1px, -1px);
+    align-content: center;
   }
-  
-   .btn:hover {
-    color: var(--primary);
-    background-color: var(--tertiary);
-    transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
-  }
-  
-  .btn-inline {
-    display: inline;
-  }
-  
-  .btn-back {
-    border-radius: var(--border-radius);
-    color: var(--primary);
-    border: none;
-    outline: none;
-    background-color: var(--light-dark);
-    box-shadow: 3px 3px var(--secondary);
-    transform: translate(-1px, -1px);
-    display: inline-block;
-    width: auto;
-    margin-top: 20px;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-  
-   .btn-back:hover {
-    color: var(--primary);
-    background-color: var(--tertiary);
-    transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
-  }
-  
-  .hero {
-    padding: 3% 4%;
-    background-color: var(--dark);
-    color: var(--primary);
-  }
-  
-  .hero p {
-    max-width: 75%;
-  }
-  
-  .app-title {
-    font-size: 3rem;
-    background-color: var(--primary);
-    color: var(--dark);
-    padding: 0 10px;
-    display: inline-block;
-    border-radius: var(--border-radius);
-    box-shadow: 6px 5px var(--light-dark);
-  }
-  
- 
 
-  .li#movieListInforDesc{
-    color:pink;
-  }
-  
-  .list-item {
-    margin-bottom: 10px;
-    padding: 1.5%;
-    border-radius: var(--border-radius);
-    background-color: var(--light-dark);
-    color: var(--primary);
-    text-decoration: none;
-  }
-  
-  .list-item:hover {
-    background-color: var(--dark);
-  }
   
   .status-icon {
     padding: 2px 5px;
@@ -166,12 +93,11 @@
     background-color: rgba(255,255,255, 1);
     border-radius: var(--border-radius);
   }
-  
+
 
   
   /* CARDS */
   .card {
-  
     margin: 1px;
     border: 3px solid var(--dark);
     border-radius: var(--border-radius);
@@ -185,27 +111,27 @@
     font-size: 40px;
     justify-content: center;
     text-align: center;
-    
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     
   }
   
   .card-body {
-    padding: 2.5%;
+    padding: 5%;
   }
   
-  /* FORM */
-  .form-label,
+/* FORM */
+.form-label,
   .form-input,
   .form-textarea {
     display: block;
   }
   
-  .form-label {
+.form-label {
     font-size: 1.1rem;
     margin: 0 0 0 5px;
   }
   
-  .form-input {
+.form-input {
     width: 100%;
     padding: 3%;
     margin: 5px 0;
@@ -214,42 +140,78 @@
     border-radius: var(--border-radius);
   }
 
-   #movie-info-container { 
+  /* Movie Container */
+#movie-search-form {
+    justify-content: center;
+    box-shadow: 10px 10px 8px 10px #888888;
+    margin:2% 0% 4%  0%;
+  }
+
+#movie-info-container { 
     background-color: cornflowerblue;
-    margin: 25px 50px 75px 100px;
+    margin: 0% 2% 2% 0%;
     padding: 0;
     font-family: "IBM Plex Sans", sans-serif;
     color: var(--dark);
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 22px;
     flex:auto;
     color:black;
     box-shadow: 10px 10px 8px #888888;
   }
 
-  #movieListInforDesc::first-letter, #movie-description::first-letter{
+#poster-img {
+  box-shadow: 10px 10px 8px #888888;
+  }
+
+#movieListInforDesc::first-letter, #movie-description::first-letter{
     font-weight:bolder;
     color:white;
     font-size:22px;
   }
 
-  #text{
+#text{
   color:black;
+  font-size:15px;
   }
 
 #description-container{
    background-color: cornflowerblue;
-    margin: 25px 50px 75px 100px;
-    padding: 10px;
+    padding: 3%;
     font-family: "IBM Plex Sans", sans-serif;
     color: var(--dark);
     line-height: 1.5;
-    font-size: 16px;
+    font-size: 22px;
     flex:auto;
     color:black;
     box-shadow: 10px 10px 8px #888888;
-    line-height: ;
+    width: 100%;
+    margin: 2% 0% 0% 0%;
 }
+
+.movie-title  {
+  color: black;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: bolder;
+  font-size: 35px;
+}
+ /* News */
+#news-links{
+  box-shadow: 10px 10px 8px #888888;
+  margin: 3%;
+  padding: 8%;
+}
+
+.news-title  {
+  text-align: center;
+  color: var(--light-dark);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bolder;
+  font-size: 35px;
+  margin:  8% 0% 2% 0%;
+}
+
+
   /* HEIGHT / WIDTH UTILS */
   .min-100-vh {
     min-height: 100vh;

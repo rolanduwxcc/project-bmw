@@ -13,7 +13,7 @@
 <body class="container">
     <section class="hero">
     <header class="flex-row">
-        <h1 class="flex-column" id="title">
+        <h1 id="title">
             Movie News Search
         </h1>
     </header>
@@ -29,20 +29,18 @@
                     <button type="submit" class="flex-column btn">Search <i class="fas fa-search-location"></i></button>
                 </form>
             </div>
-            <div id="movie-info-container" class="flex-row card-body">
+
+            <div  id="test"> 
+                <div id="movie-info-container" class="flex-row card-body"> 
                 <!-- generate html boxes for the info we pull on movie-->
-                
-            </div>
+                </div>
 
-            <div id="poster-container">
+                <div id="poster-container">
                 <!--image poster #movie-poster, #poster-img-->
+                </div>
             </div>
-
             <div id="description-container">
-
-                
                     <!--#movie-description-->
-            
             </div>
         </div>
         <!--
@@ -50,15 +48,17 @@
         To pull links to articles and display in this section
     -->
         <!--------------------------------------News Display Sections Side 2 -->
-        <div class="flex-column right-side col-12 col-md-6">
-            <h3 id="currently-title text-uppercase">Newsworthy News</h3>
+        <div class="flex-column right-side col-12 col-md-6" id="news-container">
+            <h2 class="news-title" id="currently-title text-uppercase">Newsworthy News</h3>
             <div class="card container">
-                    <div class="flex-column news-links" id="news-links">
+                    <div class="flex-column news-links" >
+                   
                     <!-- <div>
                         <img src="">
                         <a href="">news link</a>
                     </div> -->
-            </div>
+                </div>
+            <div id="news-links"></div>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
