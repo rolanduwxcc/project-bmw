@@ -1,15 +1,31 @@
 :root {
-    --primary: #ccdad1;
-    --secondary: #9caea9;
-    --tertiary: #788585;
-    --light-dark: #6f6866;
-    --dark: #38302e;
+    --primary: white;
+    --secondary: purple;
+    --tertiary: blue;
+    --light-dark: navy;
+    --dark: #purple;
     --border-radius: .3rem;
   }
   
   * {
     box-sizing: border-box;
   }
+  
+
+  .hero {
+    background-image: url("../images/cinema.jpg");
+    height: 400px;
+    background-size: cover;
+    background-position: 70%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 10px;
+    text-shadow: 0 0 10px rgba(0,0,0, 0.60);
+}
+
   
   body {
     background-color: var(--primary);
@@ -19,19 +35,32 @@
     color: var(--dark);
     line-height: 1.5;
     font-size: 16px;
+    flex:auto;
   }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  i {
+    font-weight: bold;
+    color:white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+   h1 {
+    color:white;
+    text-align: right;
+    line-height: 1.7;
+    font-size: 150px;
+    bottom: 50px;
+    vertical-align: bottom;
+    padding: 0 0 50px 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+   h2, h4, h5, h6 {
     font-weight: 700;
     margin: 0;
     color: var(--dark);
     line-height: 1.25;
   }
+  
   
   main {
     margin: 20px auto;
@@ -43,10 +72,10 @@
   }
   
    .btn {
-    font-size: 1.3rem;
+    font-size: 25px;
     text-decoration:none;
     padding: 6px 5px;
-    width: 100%;
+    width: 40%;
     display: block;
     margin: 5px 0;
     border-radius: var(--border-radius);
@@ -112,9 +141,10 @@
     box-shadow: 6px 5px var(--light-dark);
   }
   
-  .list-group {
-    padding: 0;
-    list-style: none;
+ 
+
+  .li#movieListInforDesc{
+    color:pink;
   }
   
   .list-item {
@@ -137,42 +167,26 @@
     border-radius: var(--border-radius);
   }
   
-  .icon-danger {
-    color: rgb(255, 70, 70);
-  }
-  
-  .icon-success {
-    color: rgb(29, 153, 255);
-  }
-
-  .low-risk {
-    background-color: rgb(105, 245, 168);
-  }
-  .moderate-risk {
-    background-color: rgb(235,245,105);
-  }
-  .high-risk {
-    background-color: rgb(156, 8, 13);
-    color: seashell;
-  }
-.hide {
-  display: none;
-}
 
   
   /* CARDS */
   .card {
-    /* margin: 0 0 20px 0; */
+  
     margin: 1px;
     border: 3px solid var(--dark);
     border-radius: var(--border-radius);
   }
   
   .card-header {
-    color: var(--primary);
+    color: var(--secondary);
     background-color: var(--dark);
     padding: 2.5%;
     border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+    font-size: 40px;
+    justify-content: center;
+    text-align: center;
+    
+    
   }
   
   .card-body {
@@ -199,7 +213,43 @@
     border: 2px solid var(--light-dark);
     border-radius: var(--border-radius);
   }
-  
+
+   #movie-info-container { 
+    background-color: cornflowerblue;
+    margin: 25px 50px 75px 100px;
+    padding: 0;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: var(--dark);
+    line-height: 1.5;
+    font-size: 16px;
+    flex:auto;
+    color:black;
+    box-shadow: 10px 10px 8px #888888;
+  }
+
+  #movieListInforDesc::first-letter, #movie-description::first-letter{
+    font-weight:bolder;
+    color:white;
+    font-size:22px;
+  }
+
+  #text{
+  color:black;
+  }
+
+#description-container{
+   background-color: cornflowerblue;
+    margin: 25px 50px 75px 100px;
+    padding: 10px;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: var(--dark);
+    line-height: 1.5;
+    font-size: 16px;
+    flex:auto;
+    color:black;
+    box-shadow: 10px 10px 8px #888888;
+    line-height: ;
+}
   /* HEIGHT / WIDTH UTILS */
   .min-100-vh {
     min-height: 100vh;
@@ -213,8 +263,7 @@
   .text-uppercase {
     text-transform: uppercase;
   }
-  
-  
+
   /* FLEX CONTENT */
   .flex-row {
     display: flex;
@@ -222,7 +271,7 @@
   }
   
   .flex-column {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     flex-wrap: wrap;
   }

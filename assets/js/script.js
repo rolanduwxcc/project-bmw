@@ -31,6 +31,78 @@ function fetchMovieDataAbout(searchTerm) {
     fetch(apiUrl).then(function(response) {
         if(response.ok) {
             response.json().then(function(movieDataJSON){
+                // <ul id="movieListInfo">
+                //     <li id="movieListInforDesc">Title</li>
+                //     <li id="movieListInforDesc">Acotr</li>
+                //     <li id="movieListInforDesc">Acotr</li>
+                //     <li id="movieListInforDesc">Acotr</li>
+                //     <li id="movieListInforDesc">Acotr</li>
+                // </ul>
+                var ul=$("<ul>");
+                ul.attr("id","movieListInfo");
+
+                //TITLE
+                var li1 = $("<li>");
+                li1.attr("id","movieListInforDesc");
+                li1.text("Title: "+ movieDataJSON.Title);
+                console.log(movieDataJSON.Title)
+             
+                //RELEASED
+                var li2 = $("<li>");
+                li2.attr("id", "movieListInforDesc");
+                li2.text("Release Date: " + movieDataJSON.Released);
+                console.log(movieDataJSON.Released)
+                //ACTORS
+                var li3 = $("<li>");
+                li3.attr("id", "movieListInforDesc");
+                li3.text("Actors: " + movieDataJSON.Actors);
+                console.log(movieDataJSON.Actors)
+
+                //DIRECTOR(S)
+                var li4 = $("<li>");
+                li4.attr("id", "movieListInforDesc");
+                li4.text("Director(s): " +  movieDataJSON.Director);
+                console.log(movieDataJSON.Director);
+
+                //RATINGS VIA ROTTEN TOMATOES
+                var li5 = $("<li>");
+                li5.attr("id", "movieListInforDesc");
+                li5.text("Ratings (Rotten Tomatoes): " + movieDataJSON.Ratings[0].Source + " " + movieDataJSON.Ratings[0.].Value)
+                console.log(movieDataJSON.Ratings[0].Source + " " + movieDataJSON.Ratings[0.].Value)
+
+                //APPEND DATA TO CIONTAINER
+                ul.append(li1);
+                ul.append(li2);
+                ul.append(li3);
+                ul.append(li4);
+                ul.append(li5);
+                $("#movie-info-container").append(ul)
+
+
+                //#poster-container
+                // < div id = "movie-poster" >
+                //     <img src="https://m.media-amazon.com/images/M/MV5BMTQ1MjQwMTE5OF5BMl5BanBnXkFtZTgwNjk3MTcyMDE@._V1_SX300.jpg" id="poster-img">
+                // </div>
+
+                var d1=$("<div>");
+                d1.attr("id","movie-poster")
+                var img=$("<img>");
+                img.attr("id", "poster-img");
+                img.attr("src",movieDataJSON.Poster)
+                console.log(movieDataJSON.Poster)
+                d1.append(img);
+                $("#poster-container").append(d1)
+
+               
+
+                //description-container
+                var d3 = $("<div>");
+                d3.attr("id", "movie-description");
+                d3.text("Plot: " + movieDataJSON.Plot)
+                // console.log(movieDataJSON.Plot)
+                // d3.append(d2);
+                $("#description-container").append(d3)
+
                 // console.log(movieDataJSON);
                 //INSERT FUNCTION CALL HERE
                 //call the movie html disply tag and pass JSON
@@ -76,6 +148,7 @@ function fetchMovieDataAbout(searchTerm) {
 //         alert("Unable to connect to NewsAPI!");
 //     });
 // }
+//-------------------------------------
 
 function fetchNewYorkTimesDataAbout(searchTerm) {
     console.log(searchTerm);
