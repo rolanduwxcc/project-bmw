@@ -1,10 +1,7 @@
 //------------------------------------------------VARIABLES
 var movieInputEl = document.querySelector("#movie");
 var movieSearchFormEl = document.querySelector("#movie-search-form");
-
-
-
-
+var moviesSearched = [];
 
 
 
@@ -18,6 +15,7 @@ var movieSubmitHandler = function(event) {
         movieInputEl.setAttribute("value","");
         console.log(movieName);
     }
+    saveMovie(movieName);
 };
 
 function fetchMovieDataAbout(searchTerm) {
@@ -210,5 +208,29 @@ function buildNewsHTML(nytDataJSON) {
 
     }
 }
+
+function saveMovie(searchTerm) {
+    moviesSearched.push({
+        title: searchTerm
+    });
+    //store the last search
+    if (moviesSearched.length > 1) {
+        moviesSearched.shift();
+    }
+    localStorage.setItem("moviesSearched", JSON.stringify(moviesSearched));
+}
+
+function loadMovie() {
+    moviesSearched = JSON.parse(localStorage.getItem("moviesSearched"));
+    
+    if (!moviesSearched) {
+        moviesSearched = [];
+        return;
+    }
+    
+    fetchMovieDataAbout(moviesSearched);
+}
+
 //-------------------------------------------LISTENERS and CALLS
+loadMovie();
 movieSearchFormEl.addEventListener("submit", movieSubmitHandler);
