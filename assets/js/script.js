@@ -19,6 +19,7 @@ var movieSubmitHandler = function(event) {
 };
 
 function fetchMovieDataAbout(searchTerm) {
+    
     console.log(searchTerm);
     if (!searchTerm) {
         searchTerm="Avengers";
@@ -29,6 +30,28 @@ function fetchMovieDataAbout(searchTerm) {
     fetch(apiUrl).then(function(response) {
         if(response.ok) {
             response.json().then(function(movieDataJSON){
+
+                // console.log(movieDataJSON);
+                //INSERT FUNCTION CALL HERE
+                //call the movie html disply tag and pass JSON
+                //**this fetch after probably needs to be somewhere else */
+                buildMovieInfoHTML(movieDataJSON);
+                fetchNewYorkTimesDataAbout(searchTerm);
+            });
+        }
+        else {
+            // alert("Error: " + response.statusText);
+            showErrorMessage("Error: " + response.statusText + " to OMDB!");            
+        }
+    })
+    .catch(function(error) {
+        // alert("Unable to connect to OMDB!");
+        // alert('Please enter all fields');
+        showErrorMessage("Connection error to OMDB");
+    });
+}
+
+function buildMovieInfoHTML(movieDataJSON) {
                 // <ul id="movieListInfo">
                 //     <li id="movieListInforDesc">Title</li>
                 //     <li id="movieListInforDesc">Acotr</li>
@@ -101,21 +124,6 @@ function fetchMovieDataAbout(searchTerm) {
                 // console.log(movieDataJSON.Plot)
                 // d3.append(d2);
                 $("#description-container").append(d3)
-
-                // console.log(movieDataJSON);
-                //INSERT FUNCTION CALL HERE
-                //call the movie html disply tag and pass JSON
-                //**this fetch after probably needs to be somewhere else */
-                fetchNewYorkTimesDataAbout(searchTerm);
-            });
-        }
-        else {
-            alert("Error: " + response.statusText);            
-        }
-    })
-    .catch(function(error) {
-        alert("Unable to connect to OMDB!");
-    });
 }
 
 // function fetchNewsDataAbout(searchTerm) {
@@ -170,15 +178,19 @@ function fetchNewYorkTimesDataAbout(searchTerm) {
             });
         }
         else {
-            alert("Error: " + response.statusText);
+            // alert("Error: " + response.statusText);
+            showErrorMessage("Error: " + response.statusText + " to NYT DB!"); 
         }
     })
     .catch(function(error) {
-        alert("Unable to connect to New York Times online!");
+        // alert("Unable to connect to New York Times online!");
+        showErrorMessage("Connection error to NYT!");
+
     });
 }
 
 function buildNewsHTML(nytDataJSON) {
+    
     let articlesArray=nytDataJSON.response.docs;
     let article_url;
     let article_text;
@@ -228,6 +240,18 @@ function loadMovie() {
     }
     console.log(moviesSearched[0].title);
     fetchMovieDataAbout(moviesSearched[0].title);
+}
+
+function showErrorMessage(errorText) {
+    let errorMessage = document.getElementById("error-msg");
+
+    errorMessage.setAttribute("class","errorText");
+    errorMessage.innerHTML = errorText;
+
+    // Remove error after 3 seconds
+    setTimeout(() => {
+        errorMessage.innerHTML = "";
+    }, 3000);
 
 }
 

@@ -211,6 +211,10 @@
   margin:  8% 0% 2% 0%;
 }
 
+.errorText {
+  color: red;
+}
+
 
   /* HEIGHT / WIDTH UTILS */
   .min-100-vh {
