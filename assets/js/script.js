@@ -222,13 +222,13 @@ function saveMovie(searchTerm) {
 
 function loadMovie() {
     moviesSearched = JSON.parse(localStorage.getItem("moviesSearched"));
-    
     if (!moviesSearched) {
         moviesSearched = [];
         return;
     }
-    
-    fetchMovieDataAbout(moviesSearched);
+    console.log(moviesSearched[0].title);
+    fetchMovieDataAbout(moviesSearched[0].title);
+
 }
 
 //-------------------------------------------LISTENERS and CALLS
