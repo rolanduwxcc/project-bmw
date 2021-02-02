@@ -30,7 +30,7 @@ Movie and news search site, maybe some weather. (will need to change)
 * Warren Rowland
 
 ## Contact Info
-* Brittany Lee - Find me on
+* Brittany Lee - Find me on [GitHub](https://github.com/blee2013)
 * Myles Kovacs - Find me on [GitHub](https://github.com/MylesKovacs)
 * Warren Rowland - Find me on [Linked In](https://www.linkedin.com/in/linkedinrowland/) or [GitHub](https://github.com/rolanduwxcc)
 
