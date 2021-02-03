@@ -19,6 +19,10 @@ var movieSubmitHandler = function(event) {
 };
 
 function fetchMovieDataAbout(searchTerm) {
+    //clear out the div (so you start with a blank slate each time)
+    $("#movie-info-container").empty();
+    $("#poster-container").empty();
+    $("#description-container").empty();
     
     console.log(searchTerm);
     if (!searchTerm) {

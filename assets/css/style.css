@@ -15,6 +15,7 @@
   display:flex;
   flex-direction: row;
   justify-content: space-evenly;
+  
 }
 
 
@@ -160,8 +161,10 @@
     box-shadow: 10px 10px 8px #888888;
   }
 
+
 #poster-img {
   box-shadow: 10px 10px 8px #888888;
+
   }
 
 #movieListInforDesc::first-letter, #movie-description::first-letter{
@@ -215,7 +218,7 @@
   color: red;
 }
 
-
+/* --------- */
   /* HEIGHT / WIDTH UTILS */
   .min-100-vh {
     min-height: 100vh;
@@ -325,9 +328,21 @@
   .col-12 {
     flex: 0 0 100%;
   }
+@media screen and (max-width: 640px) {
+  #test{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   
+  }
+
+}
+  /* ------------- */
   /* col-sm */
   @media screen and (min-width: 640px) {
+    #movie-info-container {
+      width: 100%;
+    }
     .col-sm-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
     }
@@ -379,7 +394,10 @@
   
   
   /* col-md */
-  @media screen and (min-width: 768px) {
+  @media screen and(min-width: 768px) {
+        #test{
+      flex-wrap: wrap;
+    }
     .col-md-1 {
       flex: 0 0 calc(100% * 1 / 12 - 2%);
     }
