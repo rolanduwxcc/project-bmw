@@ -56,43 +56,37 @@ function fetchMovieDataAbout(searchTerm) {
 }
 
 function buildMovieInfoHTML(movieDataJSON) {
-                // <ul id="movieListInfo">
-                //     <li id="movieListInforDesc">Title</li>
-                //     <li id="movieListInforDesc">Acotr</li>
-                //     <li id="movieListInforDesc">Acotr</li>
-                //     <li id="movieListInforDesc">Acotr</li>
-                //     <li id="movieListInforDesc">Acotr</li>
-                // </ul>
+                
                 var ul=$("<ul>");
                 ul.attr("id","movieListInfo");
                 // ul.text("Movie Info: ")
 
                 //TITLE
                 var li1 = $("<li>");
-                li1.attr("id","movieListInforDesc");
+                li1.attr("class","movieListInforDesc");
                 li1.text("Title: "+ movieDataJSON.Title);
                 console.log(movieDataJSON.Title)
              
                 //RELEASED
                 var li2 = $("<li>");
-                li2.attr("id", "movieListInforDesc");
+                li2.attr("class", "movieListInforDesc");
                 li2.text("Release Date: " + movieDataJSON.Released);
                 console.log(movieDataJSON.Released)
                 //ACTORS
                 var li3 = $("<li>");
-                li3.attr("id", "movieListInforDesc");
+                li3.attr("class", "movieListInforDesc");
                 li3.text("Actors: " + movieDataJSON.Actors);
                 console.log(movieDataJSON.Actors)
 
                 //DIRECTOR(S)
                 var li4 = $("<li>");
-                li4.attr("id", "movieListInforDesc");
+                li4.attr("class", "movieListInforDesc");
                 li4.text("Director(s): " +  movieDataJSON.Director);
                 console.log(movieDataJSON.Director);
 
                 //RATINGS VIA ROTTEN TOMATOES
                 var li5 = $("<li>");
-                li5.attr("id", "movieListInforDesc");
+                li5.attr("class", "movieListInforDesc");
                 li5.text("Ratings (Rotten Tomatoes): " + movieDataJSON.Ratings[0].Source + " " + movieDataJSON.Ratings[0.].Value)
                 console.log(movieDataJSON.Ratings[0].Source + " " + movieDataJSON.Ratings[0.].Value)
 

@@ -102,13 +102,16 @@
     margin: 1px;
     border: 3px solid var(--dark);
     border-radius: var(--border-radius);
+    padding: 3%;
+    text-align: center;
+    box-shadow: 10px 10px 8px #888888;
   }
   
   .card-header {
     color: var(--secondary);
     background-color: var(--dark);
     padding: 2.5%;
-    border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+    border-radius: calc(.18rem - 1px) calc(.18rem - 1px);
     font-size: 40px;
     justify-content: center;
     text-align: center;
@@ -167,7 +170,7 @@
 
   }
 
-#movieListInforDesc::first-letter, #movie-description::first-letter{
+.movieListInforDesc::first-letter, #movie-description::first-letter{
     font-weight:bolder;
     color:white;
     font-size:22px;
@@ -198,11 +201,14 @@
   font-weight: bolder;
   font-size: 35px;
 }
+
+
  /* News */
 #news-links{
-  box-shadow: 10px 10px 8px #888888;
+  /* box-shadow: 10px 10px 8px #888888; */
   margin: 3%;
   padding: 8%;
+  font-size: 30px;
 }
 
 .news-title  {
@@ -213,9 +219,19 @@
   font-size: 35px;
   margin:  8% 0% 2% 0%;
 }
+#nyimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
-.errorText {
-  color: red;
+footer {
+  background-color: blue;
+  padding: 75px;
+  font-size: 25px;
+  color:var(--primary);
+  font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 /* --------- */
