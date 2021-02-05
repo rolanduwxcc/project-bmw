@@ -1,7 +1,7 @@
-# project-bmw
+# project-bmw (needs a new name)
 
 ## Purpose
-Movie and news search site, maybe some weather. :)
+Movie and news search site, maybe some weather. (will need to change)
 
 ## Built With
 * HTML
@@ -30,11 +30,11 @@ Movie and news search site, maybe some weather. :)
 * Warren Rowland
 
 ## Contact Info
-* Brittany Lee - Find me on
-* Myles Kovacs - Find me on
+* Brittany Lee - Find me on [GitHub](https://github.com/blee2013)
+* Myles Kovacs - Find me on [GitHub](https://github.com/MylesKovacs)
 * Warren Rowland - Find me on [Linked In](https://www.linkedin.com/in/linkedinrowland/) or [GitHub](https://github.com/rolanduwxcc)
 
 ## Screenshots
-![bmw-project](assets/images/screen-shot.png)
+![bmw-project](assets/images/project-outline.png)
 
 ### ©️2020 Rolanduwxcc, Inc 

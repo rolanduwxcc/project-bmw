@@ -1,0 +1,50 @@
+W's OMDB key: 1d01c961
+
+HTML:
+Skeleton - 
+
+Body (container)
+
+    Header (row)
+        Data in header (column)
+
+    Main Container (row)
+        Left Side Container (column)
+            Search container (row)
+                Search (column)
+            Movie Info Container (row)
+                Data column (column)
+                Image column (column)
+
+        right side container (column)
+            News results container (row)
+                Title (column)
+                Link 1 (column)
+                ...
+                Link n (column)
+
+    Footer (row)
+        Data in footer (column)
+
+CS:
+????
+
+
+JS:
+Event Listener on search button.
+Get data from input field, clear the input field.
+
+Fetch movie from OMDB with the search to JSON object
+Call a function that parses and creates html
+ - For loop over it and grab it all except for boring stuff to make buttons/links
+ - Movie data items can be clicked to refresh/change the News section
+ - Set the src image for the movie post (make sure to have ALT)
+
+Then, take data returned by OMDB and shoot it over to AP News for news hits. Default to grabbing the title or first actor(s)
+Data returned by AP or whatever news api,
+Grab Links to articles, maybe look for:
+- Title
+- Link
+- Abstract
+- Date
+

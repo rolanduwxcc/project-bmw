@@ -1,0 +1,234 @@
+//NYT has multiple ways to search!!!
+
+NYT API Keys:
+W's NYT key: 2BRTvk2fDdRpikdcvLeUnTV3zBuddquD
+
+
+NYT Movie Review URL 
+https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=godfather&api-key=yourkey
+
+Movie Review search results example:
+{
+    "status": "OK",
+    "copyright": "Copyright (c) 2021 The New York Times Company. All Rights Reserved.",
+    "has_more": false,
+    "num_results": 5,
+    "results": [
+        {
+            "display_title": "Avengers: Endgame",
+            "mpaa_rating": "PG-13",
+            "critics_pick": 0,
+            "byline": "A.O. SCOTT",
+            "headline": "‘Avengers: Endgame’ Review: The Real Heroes Were the Friends We Made Along the Way",
+            "summary_short": "Iron Man, Thor, the Hulk, Captain America and other stars settle scores, tie up loose ends and take a long victory lap in the final chapter of this cycle.",
+            "publication_date": "2019-04-23",
+            "opening_date": "2019-04-26",
+            "date_updated": "2019-05-23 16:44:02",
+            "link": {
+                "type": "article",
+                "url": "http://www.nytimes.com/2019/04/23/movies/avengers-endgame-review.html",
+                "suggested_link_text": "Read the New York Times Review of Avengers: Endgame"    
+            },
+            "multimedia": {
+                "type": "mediumThreeByTwo210",
+                "src": "https://static01.nyt.com/images/2019/04/23/arts/23avengers-hp-promo/23avengers-hp-promo-mediumThreeByTwo210-v5.jpg",
+                "width": 210,
+                "height": 140
+            }
+        },
+        {
+            "display_title": "Avengers: Infinity War",
+            "mpaa_rating": "PG-13",
+            "critics_pick": 0,
+            "byline": "A.O. SCOTT",
+            "headline": "‘Avengers: Infinity War’: It’s Marvel’s Universe. We Just Live in It.",
+            "summary_short": "Infinity? Come on. It’s not even three hours! But there is enough time to get a hunky-Chris showdown (Pratt vs. Hemsworth vs. Evans).",
+            "publication_date": "2018-04-24",
+            "opening_date": "2018-04-27",
+            "date_updated": "2018-05-24 16:44:02",
+            "link": {
+                "type": "article",
+                "url": "http://www.nytimes.com/2018/04/24/movies/avengers-infinity-war-review.html",
+                "suggested_link_text": "Read the New York Times Review of Avengers: Infinity War"
+        },
+            "multimedia": {
+                "type": "mediumThreeByTwo210",
+                "src": "https://static01.nyt.com/images/2018/04/27/arts/27avengers/27avengers-mediumThreeByTwo210.jpg",
+                "width": 210,
+                "height": 140
+            }
+        },
+        {
+            "display_title": "Avengers: Age Of Ultron",
+            "mpaa_rating": "PG-13",
+            "critics_pick": 0,
+            "byline": "MANOHLA DARGIS",
+            "headline": "Review: ‘Avengers: Age of Ultron’ Gets the Superband Back Together",
+            "summary_short": "The new installment in the “Avengers” franchise adds characters, including the Scarlet Witch and Quicksilver, even as its familiar heroes fight battles terrestrial and galactic.",
+            "publication_date": "2015-04-30",
+            "opening_date": "2015-05-01",
+            "date_updated": "2017-11-02 04:18:21",
+            "link": {
+                "type": "article",
+                "url": "http://www.nytimes.com/2015/05/01/movies/review-avengers-age-of-ultron-gets-the-superband-back-together.html",
+                "suggested_link_text": "Read the New York Times Review of Avengers: Age Of Ultron"
+        },
+            "multimedia": {
+                "type": "mediumThreeByTwo210",
+                "src": "https://static01.nyt.com/images/2015/05/01/arts/avengers/avengers-mediumThreeByTwo210-v3.jpg",
+                "width": 210,
+                "height": 140
+            }
+        },
+        {
+            "display_title": "The Avengers",
+            "mpaa_rating": "PG-13",
+            "critics_pick": 0,
+            "byline": "By A.&#160;O. SCOTT",
+            "headline": "Superheroes, Super Battles, Super Egos",
+            "summary_short": "Joss Whedon’s long-awaited superhero opus “The Avengers” arrives with a big cast, frequent battles and abundant banter among its characters.",
+            "publication_date": "2012-05-03",
+            "opening_date": "2012-05-04",
+            "date_updated": "2017-11-02 04:18:15",
+            "link": {
+                "type": "article",
+                "url": "http://www.nytimes.com/2012/05/04/movies/robert-downey-jr-in-the-avengers-directed-by-joss-whedon.html",
+                "suggested_link_text": "Read the New York Times Review of The Avengers"
+            },
+            "multimedia": null
+        },
+        {
+            "display_title": "The Avengers",
+            "mpaa_rating": "PG-13",
+            "critics_pick": 0,
+            "byline": "JANET MASLIN",
+            "headline": "Avengers, the (Movie)",
+            "summary_short": "British agents vs. villain with weather machine. Big-time flop.",
+            "publication_date": "1998-08-15",
+            "opening_date": "1998-08-14",
+            "date_updated": "2017-11-02 04:17:55",
+            "link": {
+                "type": "article",
+                "url": "http://www.nytimes.com/1998/08/15/movies/film-review-shh-they-re-trying-not-to-be-noticed.html",
+                "suggested_link_text": "Read the New York Times Review of The Avengers"
+            },
+            "multimedia": null
+        }
+    ]
+}
+
+NYT Article Search URL and EXAMPLE:
+
+https://api.nytimes.com/svc/search/v2/articlesearch.json?q=Evans,Chris&api-key=2BRTvk2fDdRpikdcvLeUnTV3zBuddquD
+{
+    "status": "OK",
+    "copyright": "Copyright (c) 2021 The New York Times Company. All Rights Reserved.",
+    "response": {
+        "docs": [
+            {
+                "abstract": "A look at the career of the actor now starring in “Captain America: The First Avenger.”",
+                "web_url": "https://www.nytimes.com/slideshow/2011/07/10/movies/20110710-evans.html",
+                "snippet": "A look at the career of the actor now starring in “Captain America: The First Avenger.”",
+                "lead_paragraph": "A look at the career of the actor now starring in “Captain America: The First Avenger.”",
+                "source": "The New York Times",
+                "multimedia": [
+                    {
+                        "rank": 0,
+                        "subtype": "wide",
+                        "caption": null,
+                        "credit": null,
+                        "type": "image",
+                        "url": "images/2011/07/10/movies/20110710-evans-slide-ZR25/20110710-evans-slide-ZR25-thumbWide.jpg",
+                        "height": 126,
+                        "width": 190,
+                        "legacy": {
+                            "widewidth": 190,
+                            "wideheight": 126,
+                            "wide": "images/2011/07/10/movies/20110710-evans-slide-ZR25/20110710-evans-slide-ZR25-thumbWide.jpg"
+                        },
+                        "subType": "wide",
+                        "crop_name": "thumbWide"
+                    },
+                    {
+                        "rank": 0,
+                        "subtype": "jumbo",
+                        "caption": null,
+                        "credit": null,
+                        "type": "image",
+                        "url": "images/2011/07/10/movies/20110710-evans-slide-ZR25/20110710-evans-slide-ZR25-jumbo.jpg",
+                        "height": 681,
+                        "width": 1024,
+                        "legacy": {},
+                        "subType": "jumbo",
+                        "crop_name": "jumbo"
+                    },
+                    {
+                        "rank": 0,
+                        "subtype": "slide",
+                        "caption": null,
+                        "credit": null,
+                        "type": "image",
+                        "url": "images/2011/07/10/movies/20110710-evans-slide-ZR25/20110710-evans-slide-ZR25-slide.jpg",
+                        "height": 399,
+                        "width": 600,
+                        "legacy": {},
+                        "subType": "slide",
+                        "crop_name": "slide"
+                    },
+                    {
+                        "rank": 0,
+                        "subtype": "thumbnail",
+                        "caption": null,
+                        "credit": null,
+                        "type": "image",
+                        "url": "images/2011/07/10/movies/20110710-evans-slide-ZR25/20110710-evans-slide-ZR25-thumbStandard.jpg",
+                        "height": 75,
+                        "width": 75,
+                        "legacy": {
+                            "thumbnail": "images/2011/07/10/movies/20110710-evans-slide-ZR25/20110710-evans-slide-ZR25-thumbStandard.jpg",
+                            "thumbnailwidth": 75,
+                            "thumbnailheight": 75
+                        },
+                        "subType": "thumbnail",
+                        "crop_name": "thumbStandard"
+                    }
+                ],
+                "headline": {
+                    "main": "The Films of Chris Evans",
+                    "kicker": null,
+                    "content_kicker": null,
+                    "print_headline": null,
+                    "name": null,
+                    "seo": null,
+                    "sub": null
+                },
+                "keywords": [
+                    {
+                        "name": "subject",
+                        "value": "Movies",
+                        "rank": 1,
+                        "major": "N"
+                    },
+                    {
+                        "name": "persons",
+                        "value": "Evans, Chris",
+                        "rank": 2,
+                        "major": "N"
+                    }
+                ],
+                "pub_date": "2011-07-08T20:20:08+0000",
+                "document_type": "multimedia",
+                "news_desk": "Movies",
+                "section_name": "Movies",
+                "byline": {
+                    "original": null,
+                    "person": [],
+                    "organization": null
+                },
+                "type_of_material": "Slideshow",
+                "_id": "nyt://slideshow/f3b98164-b0ec-5b9d-aae5-180e9dceeedf",
+                "word_count": 0,
+                "slideshow_credits": "Daniel Peebles for The New York Times",
+                "uri": "nyt://slideshow/f3b98164-b0ec-5b9d-aae5-180e9dceeedf"
+            },
+            .....
