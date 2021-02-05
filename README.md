@@ -1,16 +1,15 @@
-# project-bmw (needs a new name)
+# Movie News Search
 
 ## Purpose
-Movie and news search site, maybe some weather. (will need to change)
+Movie and news search site.
 
 ## Built With
 * HTML
-* CSS (the foundation)
+* CSS Grid
 * JavaScript
 * OpenWeather API
 * Font Awesome
 * Google Fonts
-* Zurb Foundation
 * OMDb API
 * News API
 
